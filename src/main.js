@@ -44,6 +44,7 @@ catFactSearchNumberBtn.addEventListener("click", async () => {
 
 catFactSearchNumber.addEventListener("click", () => {
   catFactList.textContent = "";
+  displayError.style.display = "none";
 });
 
 // Image search Button event
@@ -85,4 +86,5 @@ catsImageSearchNumberBtn.addEventListener("click", async () => {
 
 catsImageSearchNumber.addEventListener("click", () => {
   imageContainer.innerHTML = "";
+  displayError.style.display = "none";
 });
