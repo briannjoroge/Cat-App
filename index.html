@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat's App</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>The cat's App</h1>
+      <form action="">
+        <div class="cat-div">
+          <label for="cats-fact">Number of cat's fact's. (50 Maximum)</label>
+          <div class="cat-fact">
+            <input
+              type="number"
+              name="cats-fact"
+              id="cats-fact"
+              placeholder="number of cat's fact (50 Max)"
+            />
+            <button type="button" class="cat-fact-btn">Search</button>
+          </div>
+        </div>
+        <div class="cat-div">
+          <label for="cats-img">Number of cat's photos. (10 Maximum)</label>
+          <div class="cat-img">
+            <input
+              type="number"
+              name="cats-img"
+              id="cats-img"
+              placeholder="number of cat's photos (10 Max)"
+            />
+            <button type="button" class="cat-img-btn">Search</button>
+          </div>
+        </div>
+      </form>
+    </header>
+
+    <div class="main-container">
+      <div class="fact-container">
+        <ol class="cat-fact-list">
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, libero.
+          </li>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            totam nulla quam suscipit? Earum tempora harum consectetur.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, libero.
+          </li>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            totam nulla quam suscipit? Earum tempora harum consectetur.
+          </li>
+        </ol>
+      </div>
+      <div class="img-container">
+        <img src="./src/images/Screenshot1.png" alt="" />
+        <img src="./src/images/Screenshot1.png" alt="" />
+        <img src="./src/images/Screenshot1.png" alt="" />
+        <img src="./src/images/Screenshot1.png" alt="" />
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

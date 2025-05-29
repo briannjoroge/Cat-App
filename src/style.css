@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 1.6rem;
+    background-color: #e4e1df
+}
+
+.header {
+    background-color: #6db6d3a4;
+    padding: 5rem;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #1f3b4d;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.cat-div {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.cat-fact {
+  margin-top: .8rem;
+}
+
+.cat-img {
+  margin-top: .8rem;
+}
+
+.main-container {
+  padding: 2rem 3rem;
+}
+
+.fact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-fact-list li {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.img-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; 
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.img-container img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="number"], button[type="button"] {
+  background-color: white;
+  font-size: 1.6rem;
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 0.8rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+}
