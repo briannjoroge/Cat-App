@@ -1,24 +1,37 @@
-import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
+const imageContainer = document.querySelector(".img-container");
+const catsImageSearchNumber = document.getElementById("cats-img");
+const catsImageSearchNumberBtn = document.querySelector(".cat-img-btn");
+const displayError = document.querySelector(".display-error");
 
-document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`;
+catsImageSearchNumberBtn.addEventListener("click", async () => {
+  const catsImgSearchValue = catsImageSearchNumber.value;
+  if (catsImgSearchValue >= 1 && catsImgSearchValue <= 10) {
+    displayError.style.display = "none";
 
-setupCounter(document.querySelector("#counter"));
+    try {
+      const response = await fetch(
+        `https://api.thecatapi.com/v1/images/search?limit=${catsImgSearchValue}`,
+      );
+      const data = await response.json();
+
+      data.forEach((cat) => {
+        const img = document.createElement("img");
+        img.src = cat.url;
+        img.alt = "Random cat Picture";
+        imageContainer.appendChild(img);
+      });
+    } catch (error) {
+      displayError.style.display = "flex";
+      displayError.textContent =
+        "Something went wrong! Please try again later.";
+    }
+  } else {
+    displayError.style.display = "flex";
+    displayError.textContent = "Error. Enter a number between 1 - 10.";
+  }
+  console.log(catsImgSearchValue);
+});
+
+catsImageSearchNumber.addEventListener("click", () => {
+  imageContainer.innerHTML = "";
+});
